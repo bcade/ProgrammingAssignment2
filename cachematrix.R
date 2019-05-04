@@ -71,11 +71,11 @@ testFunction <- function(input_matrix = matrix(c(1, 2, 3, 4), nrow = 2),
     cat("\n\ncacheInverse, for solve / inverted matrix\n\n")
     cacheSolve(my_matrix)
     
-    cat("\n\n$getinverse, now not NULL following cacheInverse() call\n\n")
+    cat("\n\n$getinverse, now not NULL following cacheSolve() call\n\n")
     my_inverse = my_matrix$getinverse()
     print(my_inverse)
     
-    cat("\n\nnow recapitulating replacement_matrix using prior cacheInverse() matrix output\n\n")
+    cat("\n\nnow recapitulating replacement_matrix using prior cacheSolve() matrix output\n\n")
     my_matrix$set(my_inverse)
     print(my_matrix$get())
     cacheSolve(my_matrix)
