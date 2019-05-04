@@ -2,7 +2,7 @@
 
 # Equivalent functionality for matrices.
 
-# testFunction() function (optional matrix input argument) 
+# testFunction() function (optional two matrix input for testing resetting/caching) 
 #   steps through the two functions 
 #   using the default matrix: [[1, 2], [3, 4]]
 
