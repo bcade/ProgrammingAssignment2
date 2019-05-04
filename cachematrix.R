@@ -3,8 +3,7 @@
 # Equivalent functionality for matrices.
 
 # testFunction() function (optional two matrix input for testing resetting/caching) 
-#   steps through the two functions 
-#   using the default matrix: [[1, 2], [3, 4]]
+#   steps through the two functions
 
 ## makeCacheMatrix
 # Input: matrix
@@ -33,7 +32,7 @@ makeCacheMatrix <- function(x = matrix()) {
 # Input: a matrix
 # Output: Return a matrix that is the inverse of 'x'
 
-cacheInverse <- function(x, ...) {
+cacheSolve <- function(x, ...) {
     print(x)
     m <- x$getinverse()
     if(!is.null(m)) {
@@ -70,7 +69,7 @@ testFunction <- function(input_matrix = matrix(c(1, 2, 3, 4), nrow = 2),
     print(my_matrix$get())
     
     cat("\n\ncacheInverse, for solve / inverted matrix\n\n")
-    cacheInverse(my_matrix)
+    cacheSolve(my_matrix)
     
     cat("\n\n$getinverse, now not NULL following cacheInverse() call\n\n")
     my_inverse = my_matrix$getinverse()
@@ -79,5 +78,5 @@ testFunction <- function(input_matrix = matrix(c(1, 2, 3, 4), nrow = 2),
     cat("\n\nnow recapitulating replacement_matrix using prior cacheInverse() matrix output\n\n")
     my_matrix$set(my_inverse)
     print(my_matrix$get())
-    cacheInverse(my_matrix)
+    cacheSolve(my_matrix)
 }
